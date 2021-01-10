@@ -1,0 +1,8 @@
+.container-banner {
+  height: 200px;
+  background-image: url("https://www.superprof.co/blog/wp-content/uploads/2019/04/TiposGuitarras2-1060x596.jpg");
+  text-align: center;
+  color: #360ae8;
+  padding: 50px;
+  font-size: 30px;
+}
