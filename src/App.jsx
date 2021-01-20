@@ -4,10 +4,11 @@ import React from 'react';
 import Form from "./Form";
 import CourseId from "./CourseId";
 import {BrowserRouter as Router, Route, Switch  } from "react-router-dom";
-
+import MainMenu from "./MainMenu"
 
 const App= () => (
     <Router>
+      <MainMenu /> {/*con este componente estamos creando un menu principal lo llamamos fuea del switch para que siempre aparzca */}
       <Switch>
         <Route path ='/' exact component ={MainPage} /> {/* mostramos el componente en la ruta principal */}
         <Route path ='/cursos/:id' component ={CourseId} />{/*aqui le estamos pasando un parametro id a la ruta , entonces cuando el usuraio ingrese el numero del id vamos a capturar este parametro para filtar el curso que debe mostrar */}

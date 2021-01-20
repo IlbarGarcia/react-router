@@ -1,5 +1,7 @@
+import React from 'react';
 import Course from './Course' 
- const courses=[
+
+const courses=[
    {
     id:1, 
     name:'Ilbar',
@@ -25,14 +27,16 @@ import Course from './Course'
     name:'Jhon',
     lastName:'Viafara' 
    }]
- const GridCourse= () => (
+ const GridCourse= () => {
+    return(
     <div>
     {  
-      courses.map(a=> <Course lastName={a.lastName} name={a.name} id={a.id} />)
+      courses.map(a=> <Course key={a.id} lastName={a.lastName} name={a.name} id={a.id} />)
       //los props que enviamos en el componente, tienen que tener el mismo nomre en el argumento de la funcion//
     }  
     </div>
-  );
+    )
+ };
 
 
 export default GridCourse; //exportamos el componente App

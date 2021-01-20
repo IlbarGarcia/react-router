@@ -1,6 +1,7 @@
+import React from 'react';
 import './Course.css' //importamos el estilo que le vamos a dar a la tarjeta//
 // import PropTypes from'prop-types' //importamos la libreria que instalamos 
-import Course from './Course' 
+// import Course from './Course' 
 
 const courses=[
    {
@@ -35,26 +36,26 @@ const courses=[
      const  cursoActual = courses.filter(c => c.id === parseInt(match.params.id))[0] 
     
     return(
-    <Course lastName={cursoActual.lastName} name={cursoActual.name} id={cursoActual.id} />
-      
+    // <Course  lastName={cursoActual.lastName} name={cursoActual.name} id={cursoActual.id} />
+       
 
-    // <div className="card-container">
-    //   <div className="header">
-    //     <a href="ed.team">
-    //       <img src= "foto.jpg"/>
-    //     </a>
-    //     <h1>{
-    //       cursoActual?
-    //       `${cursoActual.name} ${cursoActual.lastName}`:<p1>no exixte el elemento</p1>
-    //     }
-    //     </h1>
-    //     <h2>Ilbar</h2> 
-    //     <h4>Desarrollador Web</h4>
-    //   </div>
-    //   <div className="desciption">
-    //     <p className="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi aut cum, perferendis id vel repudiandae nihil, deleniti omnis assumenda voluptate doloremque illum harum sed inventore sunt ipsa quasi. Consequuntur.</p>
-    //   </div>
-    // </div>
+    <div className="card-container">
+      <div className="header">
+        <a href="ed.team">
+          <img src= "foto.jpg"/>
+        </a>
+        <h1>{
+          cursoActual?
+          `${cursoActual.name} ${cursoActual.lastName}`:<p1>no exixte el elemento</p1>
+        }
+        </h1>
+        <h2>Ilbar</h2> 
+        <h4>Desarrollador Web</h4>
+      </div>
+      <div className="desciption">
+        <p className="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi aut cum, perferendis id vel repudiandae nihil, deleniti omnis assumenda voluptate doloremque illum harum sed inventore sunt ipsa quasi. Consequuntur.</p>
+      </div>
+    </div>
     )  
    }
   
