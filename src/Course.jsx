@@ -1,5 +1,7 @@
 import './Course.css' //importamos el estilo que le vamos a dar a la tarjeta//
 import PropTypes from'prop-types' //importamos la libreria que instalamos 
+import { Link } from 'react-router-dom' //importamos el componente de la libreria
+
 const user ={name:"Ilbar",lastName:"Garcia",age:30} 
 const edadUsuario= edad => edad>33 
  
@@ -9,16 +11,22 @@ const Course =({lastName,name,id})=> /*desestructuramos el objeto porops  los pr
  (   
     <div className="card-container">
       <div className="header">
-        <a href="ed.team">
+       
+       {/* <a href={`/cursos/${id}`}> cuando le demos click en la imagen nos va a dirigir a la direecion que tenemos en href, pero si lo usamos asi recarga la pagina , para evitar esto usamos la etiqueta link que se encuntra abajo 
+
           <img src='https://lh3.googleusercontent.com/proxy/i5OGshVCrnpBE37pP08458Tdjynee-qwT1CZXQzw9AaWCpTZzsLa55UBfXGri8nxbMKRn2K7r6zMvlxCVbomUqqR_WSGU6L0hbUf4Qk7oj9OUB7a_H-1VjSxaFd0ogdRqLTQC-fAK' alt=""/>
-        </a>
+        </a>       */}
+ 
+
+        <Link to={`/cursos/${id}`}>
+          <img src='https://lh3.googleusercontent.com/proxy/i5OGshVCrnpBE37pP08458Tdjynee-qwT1CZXQzw9AaWCpTZzsLa55UBfXGri8nxbMKRn2K7r6zMvlxCVbomUqqR_WSGU6L0hbUf4Qk7oj9OUB7a_H-1VjSxaFd0ogdRqLTQC-fAK' alt=""/>
+        </Link>
         <h2>{`${name} ${lastName}`}</h2> {/*dentro de las llaves podemos escribir javascript puro, es decir podemos hacer referncia a una variable creada o a un obejto o a una funcion , cualquier cosa que sea javacript puro, dentro de las llaves recibimos el valor de nombre que recibimos como props  */}
         <h3>{edadUsuario(user.age)?<h1>es mayor</h1>:<h3>es menor</h3>}</h3> {/*aqui dentro de las llaves llamamos la funcion, y utilizamos operadores ternarios para validar, ya que no podemos usar if observemos que en el opreador ternario podemos devolver un texto un elemento o un componente  */}
         <h4>Desarrollador Web</h4>
       </div>
       <div className="desciption">
         <p className="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nisi aut cum, perferendis id vel repudiandae nihil, deleniti omnis assumenda voluptate doloremque illum harum sed inventore sunt ipsa quasi. Consequuntur.</p>
-        <button className="button">clic</button>
       </div>
     </div>  
  )
