@@ -1,5 +1,5 @@
 import React from 'react';
-import './Course.css' //importamos el estilo que le vamos a dar a la tarjeta//
+import '../../styles/Course.css' //importamos el estilo que le vamos a dar a la tarjeta//
 // import PropTypes from'prop-types' //importamos la libreria que instalamos 
 // import Course from './Course' 
 

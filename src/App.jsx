@@ -1,10 +1,10 @@
-import GridCourse from "./GridCourse";
-import MainPage from "./MainPage"
+import GridCourse from "./Components/Organisms/GridCourse";
+import MainPage from "./Components/Page/MainPage"
 import React from 'react';
-import Form from "./Form";
-import CourseId from "./CourseId";
+import Form from "./Components/Page/Form";
+import CourseId from "./Components/Molecules/CourseId";
 import {BrowserRouter as Router, Route, Switch  } from "react-router-dom";
-import MainMenu from "./MainMenu"
+import MainMenu from "./Components/Molecules/MainMenu"
 
 const App= () => (
     <Router>
